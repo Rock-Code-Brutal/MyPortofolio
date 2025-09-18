@@ -172,7 +172,12 @@ export default function Home() {
                               <div className="text-white text-4xl">📝</div>
                           </div>
                           <div className="p-6">
-                              <h3 className="text-xl font-semibold mb-2">Todo Free</h3>
+                              <div className="flex items-center gap-2 mb-2">
+                                  <h3 className="text-xl font-semibold">Todo Free</h3>
+                                  <span className="text-xs px-2 py-1 bg-green-600/20 text-green-400 border border-green-600/30 rounded-full animate-pulse">
+                                      • LIVE
+                                  </span>
+                              </div>
                               <p className="text-gray-400 text-sm mb-4">
                                   Aplikasi To do gratis dengan fitur add,edit,delete dan mark complete.Simple dan user friendly.
                               </p>
@@ -185,7 +190,7 @@ export default function Home() {
                                   <a href="https://github.com/Rock-Code-Brutal/-todo-free" target="_blank" className="text-sm text-blue-400 hover:text-blue-300">
                                       GitHub →
                                   </a>
-                                  <a href="#" className="text-sm text-gray-400 hover:text-gray-300">
+                                  <a href="https://todo-free.vercel.app" target="_blank" className="text-sm text-blue-400 hover:text-blue-300">
                                       Live Demo →
                                   </a>
                               </div>
