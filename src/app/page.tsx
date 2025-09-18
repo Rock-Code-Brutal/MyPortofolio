@@ -70,12 +70,18 @@ export default function Home() {
                           membuat sesuatu yang bermanfaat bagi orang lain.
                       </p>
                       <div className="flex gap-4 mt-6">
-                          <button className="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors">
-                              Download CV
-                          </button>
-                          <button className="px-4 py-2 border border-gray-600 rounded-lg hover:border-gray-500 transition-colors">
-                              Hubungi Saya
-                          </button>
+                          <a 
+                              href="mailto:rockerbest06@gmail.com?subject=Request%20CV%20-%20Rocky%20Portfolio&body=Hi%20Rocky,%0A%0AI'm%20interested%20in%20your%20CV%20and%20would%20like%20to%20know%20more%20about%20your%20experience.%0A%0AThank%20you!"
+                              className="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors inline-block text-center"
+                          >
+                              📄 Request CV
+                          </a>
+                          <a 
+                              href="#contact" 
+                              className="px-4 py-2 border border-gray-600 rounded-lg hover:border-gray-500 transition-colors inline-block text-center"
+                          >
+                              💬 Hubungi Saya
+                          </a>
                       </div>
                   </div>
               </section>
