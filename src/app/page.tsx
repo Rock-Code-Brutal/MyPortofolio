@@ -1,103 +1,317 @@
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+      <main className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+          {/* Navigation Bar */}
+          <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900/20 backdrop-blur-md border-b border-gray-700">
+              <div className="container mx-auto px-4">
+                  <div className="flex items-center justify-between h-16">
+                      {/* Logo/Brand */}
+                      <div className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                          Rocky.dev
+                      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+                      {/* Navigation Links */}
+                      <div className="hidden md:flex space-x-8">
+                          <a href="#home" className="text-gray-300 hover:text-white transition-colors">
+                              Home
+                          </a>
+                          <a href="#about" className="text-gray-300 hover:text-white transition-colors">
+                              About
+                          </a>
+                          <a href="#skills" className="text-gray-300 hover:text-white transition-colors">
+                              Skills
+                          </a>
+                          <a href="#projects" className="text-gray-300 hover:text-white transition-colors">
+                              Projects
+                          </a>
+                          <a href="#contact" className="text-gray-300 hover:text-white transition-colors">
+                              Contact
+                          </a>
+                      </div>
+
+                      {/* Mobile Menu Button */}
+                      <div className="md:hidden">
+                          <button className="text-gray-400 hover:text-white">
+                              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                              </svg>
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </nav>
+
+          {/*Container Utama*/}
+          <div className="container mx-auto px-4 py-16 pt-20">
+              {/* Hero Section */}
+              <section id="home" className="text-center mb-20">
+                  <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                      Halo Aku Rocky
+                  </h1>
+                  <p className="text-xl text-gray-300">
+                      Web Developer | Javascript Enthusiast | Learner
+                  </p>
+              </section>
+
+              {/* About Me Section */}
+              <section id="about" className="mb-20">
+                  <h2 className="text-3xl font-bold mb-6 text-center">
+                      Tentang Saya
+                  </h2>
+                  <div className="bg-gray-800/50 rounded-lg p-8 backdrop-blur-sm">
+                      <p className="text-gray-300 leading-relaxed mb-4">
+                          Halo! Saya adalah seorang web developer yang passionate tentang
+                          teknologi dan selalu ingin belajar hal-hal baru. Saat ini sedang
+                          fokus mempelajari Next.Js dan modern web development.
+                      </p>
+                      <p className="text-gray-300 leading-relaxed">
+                          Saya percaya bahwa coding adalah seni untuk memecahkan masalah dan
+                          membuat sesuatu yang bermanfaat bagi orang lain.
+                      </p>
+                      <div className="flex gap-4 mt-6">
+                          <button className="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors">
+                              Download CV
+                          </button>
+                          <button className="px-4 py-2 border border-gray-600 rounded-lg hover:border-gray-500 transition-colors">
+                              Hubungi Saya
+                          </button>
+                      </div>
+                  </div>
+              </section>
+
+              {/* Skills Section */}
+              <section id="skills" className="mb-20">
+                  <h2 className="text-3xl font-bold mb-6 text-center">
+                      Skills & Teknologi
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {/* Frontend Skills */}
+                      <div className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm">
+                          <h3 className="text-xl font-semibold mb-4 text-blue-400">
+                              Frontend
+                          </h3>
+                          <div className="space-y-4">
+                              <div>
+                                  <div className="flex justify-between mb-1">
+                                      <span className="text-sm">HTML/CSS</span>
+                                      <span className="text-sm text-gray-400">80%</span>
+                                  </div>
+                                  <div className="w-full bg-gray-700 rounded-full h-2">
+                                      <div className="bg-blue-500 h-2 rounded-full" style={{width: "80%"}}></div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div className="flex justify-between mb-1">
+                                      <span className="text-sm">Javascript</span>
+                                      <span className="text-sm text-gray-400">50%</span>
+                                  </div>
+                                  <div className="w-full bg-gray-700 rounded-full h-2">
+                                      <div className="bg-yellow-500 h-2 rounded-full" style={{width: "50%"}}></div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div className="flex justify-between mb-1">
+                                      <span className="text-sm">React/Next.js</span>
+                                      <span className="text-sm text-gray-400">50%</span>
+                                  </div>
+                                  <div className="w-full bg-gray-700 rounded-full h-2">
+                                      <div className="bg-cyan-500 h-2 rounded-full" style={{width: "50%"}}></div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      {/* Backend Skills */}
+                      <div className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm">
+                          <h3 className="text-xl font-semibold mb-4 text-purple-400">
+                              Backend
+                          </h3>
+                      <div className="space-y-4">
+                          <div>
+                              <div className="flex justify-between mb-1">
+                                  <span className="text-sm">PHP/Laravel</span>
+                                  <span className="text-sm text-gray-400">75%</span>
+                              </div>
+                              <div className="w-full bg-gray-700 rounded-full h-2">
+                                  <div className="bg-purple-500 h-2 rounded-full" style={{width: "75%"}}></div>
+                              </div>
+                          </div>
+                          <div>
+                              <div className="flex justify-between mb-1">
+                                  <span className="text-sm">Node.js</span>
+                                  <span className="text-sm text-gray-400">55%</span>
+                              </div>
+                              <div className="w-full bg-gray-700 rounded-full h-2">
+                                  <div className="bg-green-500 h-2 rounded-full" style={{width: "55%"}}></div>
+                              </div>
+                          </div>
+                          <div>
+                              <div className="flex justify-between mb-1">
+                                  <span className="text-sm">MySQL</span>
+                                  <span className="text-sm text-gray-400">70%</span>
+                              </div>
+                              <div className="w-full bg-gray-700 rounded-full h-2">
+                                  <div className="bg-orange-500 h-2 rounded-full" style={{width: "70%"}}></div>
+                              </div>
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+              </section>
+
+              {/* Projects Section */}
+              <section id="projects" className="mb-20">
+                  <h2 className="text-3xl font-bold mb-6 text-center">
+                      My Project
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                      {/* Project 1: Todo Free */}
+                      <div className="bg-gray-800/50 rounded-lg overflow-hidden backdrop-blur-sm hover:scale-105 transition-transform duration-300">
+                          <div className="h-48 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center">
+                              <div className="text-white text-4xl">📝</div>
+                          </div>
+                          <div className="p-6">
+                              <h3 className="text-xl font-semibold mb-2">Todo Free</h3>
+                              <p className="text-gray-400 text-sm mb-4">
+                                  Aplikasi To do gratis dengan fitur add,edit,delete dan mark complete.Simple dan user friendly.
+                              </p>
+                              <div className="flex flex-wrap gap-2 mb-4">
+                                  <span className="text-xs px-2 py-1 bg-yellow-600/20 text-yellow-400 rounded">Vanilla Javascript</span>
+                                  <span className="text-xs px-2 py-1 bg-orange-600/20 text-orange-400 rounded">HTML & CSS</span>
+                                  <span className="text-xs px-2 py-1 bg-blue-600/20 text-blue-400 rounded">Local Storage</span>
+                              </div>
+                              <div className="flex gap-4">
+                                  <a href="https://github.com/Rock-Code-Brutal/-todo-free" target="_blank" className="text-sm text-blue-400 hover:text-blue-300">
+                                      GitHub →
+                                  </a>
+                                  <a href="#" className="text-sm text-gray-400 hover:text-gray-300">
+                                      Live Demo →
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+
+                      {/* Project 2: RockBlog */}
+                      <div className="bg-gray-800/50 rounded-lg overflow-hidden backdrop-blur-sm hover:scale-105 transition-transform duration-300">
+                          <div className="h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
+                              <div className="text-white text-4xl">📰</div>
+                          </div>
+                          <div className="p-6">
+                              <h3 className="text-xl font-semibold mb-2">RockBlog</h3>
+                              <p className="text-gray-400 text-sm mb-4">
+                                  Personal blog website dengan fitur posting artikel, kategori, dan admin panel untuk content management.
+                              </p>
+                              <div className="flex flex-wrap gap-2 mb-4">
+                                  <span className="text-xs px-2 py-1 bg-purple-600/20 text-purple-400 rounded">Laravel</span>
+                                  <span className="text-xs px-2 py-1 bg-orange-600/20 text-orange-400 rounded">MySQL</span>
+                                  <span className="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded">Bootstrap</span>
+                              </div>
+                              <div className="flex gap-4">
+                                  <a href="https://github.com/Rock-Code-Brutal/RockBlog" target="_blank" className="text-sm text-blue-400 hover:text-blue-300">
+                                      GitHub →
+                                  </a>
+                                  <a href="#" className="text-sm text-gray-400 hover:text-gray-300">
+                                      Live Demo →
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+
+                      {/* Project 3: Expense Tracker */}
+                      <div className="bg-gray-800/50 rounded-lg overflow-hidden backdrop-blur-sm hover:scale-105 transition-transform duration-300">
+                          <div className="h-48 bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center">
+                              <div className="text-white text-4xl">💰</div>
+                          </div>
+                          <div className="p-6">
+                              <h3 className="text-xl font-semibold mb-2">Expense Tracker</h3>
+                              <p className="text-gray-400 text-sm mb-4">
+                                  Aplikasi pencatat pengeluaran dengan dashboard, kategori spending, dan laporan keuangan bulanan.
+                              </p>
+                              <div className="flex flex-wrap gap-2 mb-4">
+                                  <span className="text-xs px-2 py-1 bg-red-600/20 text-red-400 rounded">Laravel</span>
+                                  <span className="text-xs px-2 py-1 bg-blue-600/20 text-blue-400 rounded">Chart.js</span>
+                                  <span className="text-xs px-2 py-1 bg-yellow-600/20 text-yellow-400 rounded">MySQL</span>
+                              </div>
+                              <div className="flex gap-4">
+                                  <a href="https://github.com/Rock-Code-Brutal/ExpenseTracker" target="_blank" className="text-sm text-blue-400 hover:text-blue-300">
+                                      GitHub →
+                                  </a>
+                                  <a href="#" className="text-sm text-gray-400 hover:text-gray-300">
+                                      Live Demo →
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+
+                  </div>
+              </section>
+
+              {/* Contact Section */}
+              <section id="contact" className="mb-20">
+                  <h2 className="text-3xl font-bold mb-6 text-center">
+                      Let&apos;s Connect! 🤝
+                  </h2>
+                  <p className="text-center text-gray-400 mb-8 max-w-2xl mx-auto">
+                      Tertarik untuk kolaborasi atau punya projek menarik?
+                      Mari kita diskusi! Saya selalu terbuka untuk opportunity baru.
+                  </p>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                      {/* Email */}
+                      <a
+                          href="mailto:rockerbest06@gmail.com"
+                          className="bg-gray-800/50 p-6 rounded-lg text-center backdrop-blur-sm hover:scale-105 transition-transform duration-300 group"
+                      >
+                          <div className="text-4xl mb-3 group-hover:animate-bounce">📧</div>
+                          <h3 className="font-semibold mb-1">Email</h3>
+                          <p className="text-sm text-gray-400">rockerbest06@gmail.com</p>
+                      </a>
+
+                      {/* GitHub */}
+                      <a
+                          href="https://github.com/Rock-Code-Brutal"
+                          target="_blank"
+                          className="bg-gray-800/50 p-6 rounded-lg text-center backdrop-blur-sm hover:scale-105 transition-transform duration-300 group"
+                      >
+                          <div className="text-4xl mb-3 group-hover:animate-pulse">🔗</div>
+                          <h3 className="font-semibold mb-1">GitHub</h3>
+                          <p className="text-sm text-gray-400">Rock-Code-Brutal</p>
+                      </a>
+
+                      {/* LinkedIn */}
+                      <a
+                          href="https://linkedin.com/in/rocky-dev"
+                          target="_blank"
+                          className="bg-gray-800/50 p-6 rounded-lg text-center backdrop-blur-sm hover:scale-105 transition-transform duration-300 group"
+                      >
+                          <div className="text-4xl mb-3 group-hover:animate-bounce">💼</div>
+                          <h3 className="font-semibold mb-1">LinkedIn</h3>
+                          <p className="text-sm text-gray-400">Connect with me</p>
+                      </a>
+
+                      {/* WhatsApp */}
+                      <a
+                          href="https://wa.me/6283167818834"
+                          target="_blank"
+                          className="bg-gray-800/50 p-6 rounded-lg text-center backdrop-blur-sm hover:scale-105 transition-transform duration-300 group"
+                      >
+                          <div className="text-4xl mb-3 group-hover:animate-bounce">💬</div>
+                          <h3 className="font-semibold mb-1">WhatsApp</h3>
+                          <p className="text-sm text-gray-400">Chat langsung</p>
+                      </a>
+                  </div>
+                  {/* CTA Button */}
+                  <div className="text-center mt-8">
+                      <a
+                          href="mailto:rockerbest06@gmail.com"
+                          className="inline-block px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                      >
+                          Hire Me! 🚀
+                      </a>
+                  </div>
+              </section>
+          </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
   );
 }
