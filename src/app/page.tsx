@@ -211,14 +211,15 @@ export default function Home() {
                                   <span className="text-xs px-2 py-1 bg-purple-600/20 text-purple-400 rounded">Laravel</span>
                                   <span className="text-xs px-2 py-1 bg-orange-600/20 text-orange-400 rounded">MySQL</span>
                                   <span className="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded">Bootstrap</span>
+                                  <span className="text-xs px-2 py-1 bg-gray-600/20 text-gray-400 rounded">Backend</span>
                               </div>
                               <div className="flex gap-4">
                                   <a href="https://github.com/Rock-Code-Brutal/RockBlog" target="_blank" className="text-sm text-blue-400 hover:text-blue-300">
                                       GitHub →
                                   </a>
-                                  <a href="#" className="text-sm text-gray-400 hover:text-gray-300">
-                                      Live Demo →
-                                  </a>
+                                  <span className="text-sm text-gray-500 cursor-not-allowed">
+                                      Repository Only
+                                  </span>
                               </div>
                           </div>
                       </div>
@@ -237,14 +238,15 @@ export default function Home() {
                                   <span className="text-xs px-2 py-1 bg-red-600/20 text-red-400 rounded">Laravel</span>
                                   <span className="text-xs px-2 py-1 bg-blue-600/20 text-blue-400 rounded">Chart.js</span>
                                   <span className="text-xs px-2 py-1 bg-yellow-600/20 text-yellow-400 rounded">MySQL</span>
+                                  <span className="text-xs px-2 py-1 bg-gray-600/20 text-gray-400 rounded">Backend</span>
                               </div>
                               <div className="flex gap-4">
                                   <a href="https://github.com/Rock-Code-Brutal/ExpenseTracker" target="_blank" className="text-sm text-blue-400 hover:text-blue-300">
                                       GitHub →
                                   </a>
-                                  <a href="#" className="text-sm text-gray-400 hover:text-gray-300">
-                                      Live Demo →
-                                  </a>
+                                  <span className="text-sm text-gray-500 cursor-not-allowed">
+                                      Repository Only
+                                  </span>
                               </div>
                           </div>
                       </div>
