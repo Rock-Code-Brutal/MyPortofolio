@@ -294,7 +294,7 @@ export default function Home() {
 
                       {/* LinkedIn */}
                       <a
-                          href="https://linkedin.com/in/rocky-dev"
+                          href="https://www.linkedin.com/in/rocky-kho-75aa40294/"
                           target="_blank"
                           className="bg-gray-800/50 p-6 rounded-lg text-center backdrop-blur-sm hover:scale-105 transition-transform duration-300 group"
                       >
