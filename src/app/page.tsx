@@ -1,7 +1,13 @@
+'use client';
+
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { CheckSquare, Newspaper, Wallet, Mail, Github, Linkedin, MessageCircle, Briefcase, FileText, Users, Shield, Building2 } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
+import LanguageToggle from '@/components/LanguageToggle';
 
 export default function Home() {
+    const { t } = useLanguage();
+
     return (
         <main className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white">
             {/* Navigation Bar */}
@@ -16,63 +22,62 @@ export default function Home() {
                         {/* Navigation Links */}
                         <div className="hidden md:flex space-x-8">
                             <a href="#home" className="text-gray-300 hover:text-white transition-colors">
-                                Home
+                                {t.nav.home}
                             </a>
                             <a href="#about" className="text-gray-300 hover:text-white transition-colors">
-                                About
+                                {t.nav.about}
                             </a>
                             <a href="#skills" className="text-gray-300 hover:text-white transition-colors">
-                                Skills
+                                {t.nav.skills}
                             </a>
                             <a href="#projects" className="text-gray-300 hover:text-white transition-colors">
-                                Projects
+                                {t.nav.projects}
                             </a>
                             <a href="#contact" className="text-gray-300 hover:text-white transition-colors">
-                                Contact
+                                {t.nav.contact}
                             </a>
                         </div>
 
-                        {/* Mobile Menu Button */}
-                        <div className="md:hidden">
-                            <button className="text-gray-400 hover:text-white">
-                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                                </svg>
-                            </button>
+                        {/* Language Toggle & Mobile Menu */}
+                        <div className="flex items-center gap-3">
+                            <LanguageToggle />
+                            
+                            {/* Mobile Menu Button */}
+                            <div className="md:hidden">
+                                <button className="text-gray-400 hover:text-white">
+                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </nav>
 
-            {/*Container Utama*/}
+            {/* Main Container */}
             <div className="container mx-auto px-4 py-16 pt-20">
                 {/* Hero Section */}
                 <section id="home" className="text-center mb-20">
                     <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                        Halo Aku Rocky
+                        {t.hero.greeting}
                     </h1>
                     <p className="text-xl text-gray-300">
-                        IT Support Specialist | Fullstack Developer | AI-Assisted Development Specialist
+                        {t.hero.title}
                     </p>
                 </section>
 
                 {/* About Me Section */}
                 <section id="about" className="mb-20">
                     <h2 className="text-3xl font-bold mb-6 text-center">
-                        Tentang Saya
+                        {t.about.title}
                     </h2>
                     <div className="bg-gray-800/50 rounded-lg p-8 backdrop-blur-sm">
                         <p className="text-gray-300 leading-relaxed mb-4">
-                            Profesional IT dengan pengalaman mengelola infrastruktur kritis di sektor perbankan.
-                            Saya mengkhususkan diri dalam pengembangan aplikasi web yang efisien melalui
-                            metodologi AI-Assisted Development, yang memungkinkan percepatan siklus delivery
-                            proyek hingga 40% tanpa mengorbankan kualitas kode dan standar keamanan.
+                            {t.about.description1}
                         </p>
                         <p className="text-gray-300 leading-relaxed">
-                            Keahlian saya mencakup arsitektur fullstack modern dengan fokus pada solusi
-                            berbasis data dan integrasi sistem yang robust. Pendekatan kerja saya menggabungkan
-                            technical expertise dengan workflow AI-assisted untuk menghasilkan output yang
-                            terukur, scalable, dan siap produksi dalam timeline yang kompetitif.
+                            {t.about.description2}
                         </p>
                         <div className="flex gap-4 mt-6">
                             <a
@@ -80,14 +85,14 @@ export default function Home() {
                                 className="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center gap-2 text-center"
                             >
                                 <FileText size={18} />
-                                Request CV
+                                {t.about.requestCV}
                             </a>
                             <a
                                 href="#contact"
                                 className="px-4 py-2 border border-gray-600 rounded-lg hover:border-gray-500 transition-colors inline-flex items-center gap-2 text-center"
                             >
                                 <MessageCircle size={18} />
-                                Kontak Profesional
+                                {t.about.contact}
                             </a>
                         </div>
                     </div>
@@ -96,13 +101,13 @@ export default function Home() {
                 {/* Skills Section */}
                 <section id="skills" className="mb-20">
                     <h2 className="text-3xl font-bold mb-6 text-center">
-                        Skills & Teknologi
+                        {t.skills.title}
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {/* Frontend Skills */}
                         <div className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm">
                             <h3 className="text-xl font-semibold mb-4 text-blue-400">
-                                Frontend
+                                {t.skills.frontend}
                             </h3>
                             <div className="flex flex-wrap gap-2">
                                 <span className="px-3 py-1.5 bg-blue-600/20 text-blue-400 border border-blue-600/30 rounded-lg text-sm font-medium">HTML/CSS</span>
@@ -116,7 +121,7 @@ export default function Home() {
                         {/* Backend Skills */}
                         <div className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm">
                             <h3 className="text-xl font-semibold mb-4 text-purple-400">
-                                Backend
+                                {t.skills.backend}
                             </h3>
                             <div className="flex flex-wrap gap-2">
                                 <span className="px-3 py-1.5 bg-purple-600/20 text-purple-400 border border-purple-600/30 rounded-lg text-sm font-medium">PHP</span>
@@ -130,7 +135,7 @@ export default function Home() {
                         {/* AI Workflow */}
                         <div className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm">
                             <h3 className="text-xl font-semibold mb-4 text-emerald-400">
-                                AI Workflow
+                                {t.skills.aiWorkflow}
                             </h3>
                             <div className="flex flex-wrap gap-2">
                                 <span className="px-3 py-1.5 bg-emerald-600/20 text-emerald-400 border border-emerald-600/30 rounded-lg text-sm font-medium">Prompt Engineering</span>
@@ -145,7 +150,7 @@ export default function Home() {
                 {/* Projects Section */}
                 <section id="projects" className="mb-20">
                     <h2 className="text-3xl font-bold mb-6 text-center">
-                        My Project
+                        {t.projects.title}
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {/* FEATURED Project: BPR Dumai Kapital Lestari */}
@@ -159,20 +164,17 @@ export default function Home() {
                             <div className="p-6">
                                 <div className="flex items-center gap-2 mb-2 flex-wrap">
                                     <h3 className="text-xl font-semibold text-transparent bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text">
-                                        BPR Dumai Kapital Lestari
+                                        {t.projects.bpr.title}
                                     </h3>
                                     <span className="text-xs px-2 py-1 bg-yellow-600/20 text-yellow-400 border border-yellow-600/30 rounded-full">
-                                        CONFIDENTIAL
+                                        {t.projects.bpr.confidential}
                                     </span>
                                 </div>
                                 <p className="text-xs text-yellow-400/80 font-medium mb-3">
-                                    🏛️ Enterprise Banking Platform
+                                    🏛️ {t.projects.bpr.subtitle}
                                 </p>
                                 <p className="text-gray-400 text-sm mb-4 leading-relaxed">
-                                    Architected and deployed a mission-critical OJK-compliant banking website as
-                                    <strong className="text-white"> Solo Developer</strong>. Built with zero-trust security
-                                    principles, delivering customer-facing financial services with institutional-grade
-                                    infrastructure, LPS compliance features, and responsive UI/UX optimized for trust and accessibility.
+                                    {t.projects.bpr.description}
                                 </p>
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     <span className="text-xs px-2 py-1 bg-slate-600/20 text-slate-300 rounded border border-slate-600/30">Next.js 16</span>
@@ -183,7 +185,7 @@ export default function Home() {
                                 </div>
                                 <div className="flex items-center gap-2 text-xs text-gray-500 italic border-t border-gray-700 pt-3">
                                     <Shield size={14} />
-                                    <span>Source code confidential - Banking institution security protocols</span>
+                                    <span>{t.projects.bpr.securityNote}</span>
                                 </div>
                             </div>
                         </div>
@@ -195,15 +197,13 @@ export default function Home() {
                             </div>
                             <div className="p-6">
                                 <div className="flex items-center gap-2 mb-2">
-                                    <h3 className="text-xl font-semibold">Todo Free</h3>
+                                    <h3 className="text-xl font-semibold">{t.projects.todoFree.title}</h3>
                                     <span className="text-xs px-2 py-1 bg-green-600/20 text-green-400 border border-green-600/30 rounded-full animate-pulse">
-                                        • LIVE
+                                        • {t.projects.todoFree.live}
                                     </span>
                                 </div>
                                 <p className="text-gray-400 text-sm mb-4">
-                                    Aplikasi manajemen tugas dengan arsitektur responsif dan antarmuka yang
-                                    intuitif. Dirancang dengan fokus pada efisiensi operasional dan kemudahan
-                                    akses lintas perangkat untuk produktivitas maksimal.
+                                    {t.projects.todoFree.description}
                                 </p>
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     <span className="text-xs px-2 py-1 bg-yellow-600/20 text-yellow-400 rounded">Vanilla Javascript</span>
@@ -212,10 +212,10 @@ export default function Home() {
                                 </div>
                                 <div className="flex gap-4">
                                     <a href="https://github.com/Rock-Code-Brutal/-todo-free" target="_blank" className="text-sm text-blue-400 hover:text-blue-300">
-                                        GitHub →
+                                        {t.projects.todoFree.github}
                                     </a>
                                     <a href="https://todo-free.vercel.app" target="_blank" className="text-sm text-blue-400 hover:text-blue-300">
-                                        Live Demo →
+                                        {t.projects.todoFree.liveDemo}
                                     </a>
                                 </div>
                             </div>
@@ -227,11 +227,9 @@ export default function Home() {
                                 <Newspaper className="text-white" size={64} strokeWidth={1.5} />
                             </div>
                             <div className="p-6">
-                                <h3 className="text-xl font-semibold mb-2">RockBlog</h3>
+                                <h3 className="text-xl font-semibold mb-2">{t.projects.rockBlog.title}</h3>
                                 <p className="text-gray-400 text-sm mb-4">
-                                    Platform Content Management System dengan arsitektur data terstruktur dan
-                                    sistem otorisasi multi-level. Mengimplementasikan best practices dalam
-                                    pengelolaan konten digital dan keamanan akses administratif.
+                                    {t.projects.rockBlog.description}
                                 </p>
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     <span className="text-xs px-2 py-1 bg-purple-600/20 text-purple-400 rounded">Laravel</span>
@@ -241,10 +239,10 @@ export default function Home() {
                                 </div>
                                 <div className="flex gap-4">
                                     <a href="https://github.com/Rock-Code-Brutal/RockBlog" target="_blank" className="text-sm text-blue-400 hover:text-blue-300">
-                                        GitHub →
+                                        {t.projects.rockBlog.github}
                                     </a>
                                     <span className="text-sm text-gray-500 cursor-not-allowed">
-                                        Repository Only
+                                        {t.projects.rockBlog.repoOnly}
                                     </span>
                                 </div>
                             </div>
@@ -256,11 +254,9 @@ export default function Home() {
                                 <Wallet className="text-white" size={64} strokeWidth={1.5} />
                             </div>
                             <div className="p-6">
-                                <h3 className="text-xl font-semibold mb-2">Expense Tracker</h3>
+                                <h3 className="text-xl font-semibold mb-2">{t.projects.expenseTracker.title}</h3>
                                 <p className="text-gray-400 text-sm mb-4">
-                                    Solusi analisis keuangan komprehensif dengan dashboard visualisasi data real-time.
-                                    Mengadopsi standar akurasi pelaporan dari sistem perbankan untuk memastikan
-                                    integritas data dan presisi dalam tracking transaksi finansial.
+                                    {t.projects.expenseTracker.description}
                                 </p>
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     <span className="text-xs px-2 py-1 bg-red-600/20 text-red-400 rounded">Laravel</span>
@@ -270,15 +266,14 @@ export default function Home() {
                                 </div>
                                 <div className="flex gap-4">
                                     <a href="https://github.com/Rock-Code-Brutal/ExpenseTracker" target="_blank" className="text-sm text-blue-400 hover:text-blue-300">
-                                        GitHub →
+                                        {t.projects.expenseTracker.github}
                                     </a>
                                     <span className="text-sm text-gray-500 cursor-not-allowed">
-                                        Repository Only
+                                        {t.projects.expenseTracker.repoOnly}
                                     </span>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </section>
 
@@ -286,14 +281,12 @@ export default function Home() {
                 <section id="contact" className="mb-20">
                     <div className="flex items-center justify-center gap-3 mb-6">
                         <h2 className="text-3xl font-bold text-center">
-                            Let&apos;s Connect!
+                            {t.contact.title}
                         </h2>
                         <Users className="text-blue-400" size={32} />
                     </div>
                     <p className="text-center text-gray-400 mb-8 max-w-2xl mx-auto">
-                        Saya terbuka untuk mendiskusikan peluang kolaborasi atau kebutuhan pengembangan
-                        teknologi untuk organisasi Anda. Mari kita bicarakan bagaimana saya dapat
-                        memberikan kontribusi strategis bagi tim dan proyek Anda.
+                        {t.contact.description}
                     </p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
@@ -305,7 +298,7 @@ export default function Home() {
                             <div className="flex justify-center mb-3">
                                 <Mail className="text-blue-400 group-hover:animate-bounce" size={48} strokeWidth={1.5} />
                             </div>
-                            <h3 className="font-semibold mb-1">Email</h3>
+                            <h3 className="font-semibold mb-1">{t.contact.email}</h3>
                             <p className="text-sm text-gray-400">rockerbest06@gmail.com</p>
                         </a>
 
@@ -318,7 +311,7 @@ export default function Home() {
                             <div className="flex justify-center mb-3">
                                 <Github className="text-purple-400 group-hover:animate-pulse" size={48} strokeWidth={1.5} />
                             </div>
-                            <h3 className="font-semibold mb-1">GitHub</h3>
+                            <h3 className="font-semibold mb-1">{t.contact.github}</h3>
                             <p className="text-sm text-gray-400">Rock-Code-Brutal</p>
                         </a>
 
@@ -331,8 +324,8 @@ export default function Home() {
                             <div className="flex justify-center mb-3">
                                 <Linkedin className="text-cyan-400 group-hover:animate-bounce" size={48} strokeWidth={1.5} />
                             </div>
-                            <h3 className="font-semibold mb-1">LinkedIn</h3>
-                            <p className="text-sm text-gray-400">Connect with me</p>
+                            <h3 className="font-semibold mb-1">{t.contact.linkedin}</h3>
+                            <p className="text-sm text-gray-400">{t.contact.linkedinText}</p>
                         </a>
 
                         {/* WhatsApp */}
@@ -344,8 +337,8 @@ export default function Home() {
                             <div className="flex justify-center mb-3">
                                 <MessageCircle className="text-green-400 group-hover:animate-bounce" size={48} strokeWidth={1.5} />
                             </div>
-                            <h3 className="font-semibold mb-1">WhatsApp</h3>
-                            <p className="text-sm text-gray-400">Komunikasi Cepat</p>
+                            <h3 className="font-semibold mb-1">{t.contact.whatsapp}</h3>
+                            <p className="text-sm text-gray-400">{t.contact.whatsappText}</p>
                         </a>
                     </div>
                     {/* CTA Button */}
@@ -355,11 +348,12 @@ export default function Home() {
                             className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                         >
                             <Briefcase size={20} />
-                            Diskusi Kolaborasi
+                            {t.contact.cta}
                         </a>
                     </div>
                 </section>
             </div>
+            <SpeedInsights />
         </main>
     );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { LanguageProvider } from '@/contexts/LanguageContext';
 import "./globals.css";
 
 const geistSans = Geist({
@@ -16,12 +17,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Rocky | IT Support Specialist | Fullstack Developer | AI-Assisted Development Specialist",
-  description: "Profesional IT dengan pengalaman mengelola infrastruktur kritis di sektor perbankan. Spesialisasi dalam pengembangan fullstack dengan metodologi AI-Assisted Development untuk percepatan delivery proyek berkualitas tinggi.",
+  description: "IT Professional with experience managing critical infrastructure in the banking sector. Specializing in fullstack development with AI-Assisted Development methodology for high-quality project delivery acceleration.",
   keywords: "IT Support, Fullstack Developer, AI-Assisted Development, Prompt Engineering, JavaScript, React, Next.js, Laravel, PHP, Banking Infrastructure, Enterprise Solutions",
   authors: [{ name: "Rocky" }],
   openGraph: {
     title: "Rocky | IT Support Specialist | Fullstack Developer",
-    description: "Profesional IT spesialisasi dalam pengembangan fullstack dan AI-assisted development workflow",
+    description: "IT Professional specializing in fullstack development and AI-assisted development workflow",
     url: "https://my-portofolio-eta-seven.vercel.app",
     siteName: "Rocky Portfolio",
     type: "website",
@@ -38,7 +39,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
         <Analytics />
         <SpeedInsights />
       </body>
