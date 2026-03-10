@@ -14,7 +14,7 @@ export const translations = {
     about: {
       title: "About Me",
       description1: "IT Professional with hands-on experience managing critical infrastructure in the regulated banking sector. I engineer efficient, production-ready web applications using an AI-Assisted Development workflow—accelerating delivery cycles by up to 40% while maintaining strict code quality and security standards.",
-      description2: "My expertise spans modern fullstack architecture, regulatory-compliant system design, and AI-augmented engineering. I treat AI tooling (Claude AI + Lyra) as a force multiplier—not a shortcut—to produce scalable, auditable, and maintainable output under competitive timelines.",
+      description2: "My expertise spans modern fullstack architecture, regulatory-compliant system design, and AI-augmented engineering. I treat AI tooling as a force multiplier—not a shortcut—to produce scalable, auditable, and maintainable output under competitive timelines.",
       requestCV: "Request CV",
       contact: "Professional Contact",
     },
@@ -30,7 +30,7 @@ export const translations = {
         title: "BPR Dumai Kapital Lestari",
         subtitle: "Enterprise Banking Platform",
         confidential: "CONFIDENTIAL",
-        description: "Sole engineer responsible for the full system lifecycle of a regulated banking web platform under Indonesia's OJK framework. Designed the information architecture to enforce least-privilege data exposure—ensuring no sensitive customer or transactional data surfaces on the public-facing layer. Implemented UI/UX flows aligned with LPS compliance requirements and institutional trust standards. Accelerated end-to-end delivery by 40% by integrating an AI-Assisted Development workflow (Claude AI + Lyra) for spec drafting, component scaffolding, and QA iteration—without compromising regulatory or security requirements.",
+        description: "Sole engineer responsible for the full system lifecycle of a regulated banking web platform under Indonesia's OJK framework. Designed the information architecture to enforce least-privilege data exposure—ensuring no sensitive customer or transactional data surfaces on the public-facing layer. Implemented UI/UX flows aligned with LPS compliance requirements and institutional trust standards. Accelerated end-to-end delivery by 40% by integrating an AI-Assisted Development workflow for spec drafting, component scaffolding, and QA iteration—without compromising regulatory or security requirements.",
         securityNote: "⚠ Disclosure Notice: This project operates under a banking institution's information security policy. Source code, infrastructure details, and internal system architecture are classified under client NDA and financial sector confidentiality protocols. Available for technical discussion in a controlled setting upon request.",
       },
       todoFree: {
@@ -80,7 +80,7 @@ export const translations = {
     about: {
       title: "Tentang Saya",
       description1: "Profesional IT dengan pengalaman langsung mengelola infrastruktur kritis di sektor perbankan yang terregulasi. Saya membangun aplikasi web siap produksi menggunakan workflow AI-Assisted Development—mempercepat siklus delivery hingga 40% tanpa mengorbankan standar kualitas kode dan keamanan.",
-      description2: "Keahlian saya mencakup arsitektur fullstack modern, desain sistem yang patuh regulasi, dan rekayasa berbantuan AI. Saya menggunakan AI tooling (Claude AI + Lyra) sebagai force multiplier—bukan jalan pintas—untuk menghasilkan output yang scalable, auditable, dan maintainable dalam timeline kompetitif.",
+      description2: "Keahlian saya mencakup arsitektur fullstack modern, desain sistem yang patuh regulasi, dan rekayasa berbantuan AI. Saya menggunakan AI tooling sebagai force multiplier—bukan jalan pintas—untuk menghasilkan output yang scalable, auditable, dan maintainable dalam timeline kompetitif.",
       requestCV: "Minta CV",
       contact: "Kontak Profesional",
     },
@@ -96,7 +96,7 @@ export const translations = {
         title: "BPR Dumai Kapital Lestari",
         subtitle: "Platform Perbankan Enterprise",
         confidential: "RAHASIA",
-        description: "Satu-satunya engineer yang bertanggung jawab atas seluruh siklus hidup sistem platform web perbankan terregulasi di bawah kerangka OJK Indonesia. Merancang arsitektur informasi dengan prinsip least-privilege—memastikan tidak ada data nasabah atau transaksi sensitif yang terekspos di lapisan publik. Mengimplementasikan alur UI/UX sesuai persyaratan kepatuhan LPS dan standar kepercayaan institusional. Mempercepat delivery end-to-end sebesar 40% dengan mengintegrasikan workflow AI-Assisted Development (Claude AI + Lyra) untuk drafting spesifikasi, scaffolding komponen, dan iterasi QA—tanpa mengorbankan persyaratan regulasi maupun keamanan.",
+        description: "Satu-satunya engineer yang bertanggung jawab atas seluruh siklus hidup sistem platform web perbankan terregulasi di bawah kerangka OJK Indonesia. Merancang arsitektur informasi dengan prinsip least-privilege—memastikan tidak ada data nasabah atau transaksi sensitif yang terekspos di lapisan publik. Mengimplementasikan alur UI/UX sesuai persyaratan kepatuhan LPS dan standar kepercayaan institusional. Mempercepat delivery end-to-end sebesar 40% dengan mengintegrasikan workflow AI-Assisted Development untuk drafting spesifikasi, scaffolding komponen, dan iterasi QA—tanpa mengorbankan persyaratan regulasi maupun keamanan.",
         securityNote: "⚠ Catatan Keterbukaan: Proyek ini beroperasi di bawah kebijakan keamanan informasi institusi perbankan. Source code, detail infrastruktur, dan arsitektur sistem internal diklasifikasikan di bawah NDA klien dan protokol kerahasiaan sektor keuangan. Tersedia untuk diskusi teknis dalam setting terkontrol atas permintaan.",
       },
       todoFree: {
