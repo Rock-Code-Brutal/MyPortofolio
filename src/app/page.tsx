@@ -1,7 +1,8 @@
 'use client';
 
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { CheckSquare, Newspaper, Wallet, Mail, Github, Linkedin, MessageCircle, Briefcase, FileText, Users, Shield, Building2 } from 'lucide-react';
+import { CheckSquare, Newspaper, Wallet, Mail, Github, Linkedin, MessageCircle, Briefcase, FileText, Users, Shield, Building2, TrendingDown, Search } from 'lucide-react';
+import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageToggle from '@/components/LanguageToggle';
 
@@ -271,6 +272,49 @@ export default function Home() {
                                     <span className="text-sm text-gray-500 cursor-not-allowed">
                                         {t.projects.expenseTracker.repoOnly}
                                     </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Project 4: SEO Spam Recovery */}
+                        <div className="bg-gray-800/50 rounded-lg overflow-hidden backdrop-blur-sm hover:scale-105 transition-transform duration-300 border border-green-600/30">
+                            <div className="h-48 bg-gradient-to-br from-green-700 via-emerald-700 to-teal-800 flex items-center justify-center relative overflow-hidden">
+                                <Image
+                                    src="/gsc.jpeg"
+                                    alt="GSC spam recovery evidence"
+                                    fill
+                                    className="object-cover opacity-60"
+                                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                                />
+                                <div className="relative z-10 text-center">
+                                    <TrendingDown className="text-green-300 mx-auto mb-2" size={48} strokeWidth={1.5} />
+                                    <Search className="text-white/60 mx-auto" size={24} strokeWidth={1.5} />
+                                </div>
+                                <div className="absolute top-3 right-3 z-10">
+                                    <span className="text-xs px-2 py-1 bg-green-500/30 text-green-300 border border-green-500/40 rounded-full font-bold">
+                                        {t.projects.seoRecovery.badge}
+                                    </span>
+                                </div>
+                            </div>
+                            <div className="p-6">
+                                <h3 className="text-xl font-semibold mb-1 text-transparent bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text">
+                                    {t.projects.seoRecovery.title}
+                                </h3>
+                                <p className="text-xs text-green-400/80 font-medium mb-3">
+                                    🔍 {t.projects.seoRecovery.subtitle}
+                                </p>
+                                <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+                                    {t.projects.seoRecovery.description}
+                                </p>
+                                <div className="flex flex-wrap gap-2 mb-4">
+                                    <span className="text-xs px-2 py-1 bg-green-600/20 text-green-400 rounded border border-green-600/30">Google Search Console</span>
+                                    <span className="text-xs px-2 py-1 bg-orange-600/20 text-orange-400 rounded border border-orange-600/30">WordPress</span>
+                                    <span className="text-xs px-2 py-1 bg-slate-600/20 text-slate-300 rounded border border-slate-600/30">.htaccess</span>
+                                    <span className="text-xs px-2 py-1 bg-red-600/20 text-red-400 rounded border border-red-600/30">Disavow</span>
+                                </div>
+                                <div className="flex items-center gap-2 text-sm font-semibold text-green-400 border-t border-gray-700 pt-3">
+                                    <TrendingDown size={16} />
+                                    <span>{t.projects.seoRecovery.result}</span>
                                 </div>
                             </div>
                         </div>

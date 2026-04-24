@@ -52,6 +52,14 @@ export const translations = {
         github: "GitHub →",
         repoOnly: "Repository Only",
       },
+      seoRecovery: {
+        title: "SEO Spam Recovery",
+        subtitle: "Google Search Console — BPR Dumai Kapital Lestari",
+        badge: "REAL IMPACT",
+        description: "Diagnosed and eradicated a legacy WordPress gambling spam injection that had indexed 19,000+ spam URLs in Google Search Console. Executed full remediation: malicious file removal, .htaccess hardening, Google disavow submission, and manual index cleanup. Result: spam coverage collapsed from ~19,000 to under 600 indexed pages — restoring domain authority and search integrity for a regulated banking institution.",
+        result: "19,000 → ~600 spam URLs indexed",
+        proofLabel: "GSC Evidence",
+      },
     },
     contact: {
       title: "Let's Connect!",
@@ -117,6 +125,14 @@ export const translations = {
         description: "Solusi analisis keuangan komprehensif dengan dashboard visualisasi data real-time. Mengadopsi standar akurasi pelaporan dari sistem perbankan untuk memastikan integritas data dan presisi dalam tracking transaksi finansial.",
         github: "GitHub →",
         repoOnly: "Repositori Saja",
+      },
+      seoRecovery: {
+        title: "SEO Spam Recovery",
+        subtitle: "Google Search Console — BPR Dumai Kapital Lestari",
+        badge: "DAMPAK NYATA",
+        description: "Mendiagnosis dan membasmi injeksi spam judi WordPress lama yang telah mengindeks 19.000+ URL spam di Google Search Console. Melakukan remediasi penuh: penghapusan file berbahaya, hardening .htaccess, pengajuan Google disavow, dan pembersihan indeks manual. Hasilnya: cakupan spam turun dari ~19.000 menjadi di bawah 600 URL terindeks — memulihkan otoritas domain dan integritas pencarian institusi perbankan yang terregulasi.",
+        result: "19.000 → ~600 URL spam terindeks",
+        proofLabel: "Bukti GSC",
       },
     },
     contact: {
