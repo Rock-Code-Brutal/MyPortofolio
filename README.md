@@ -88,6 +88,7 @@ npm start
    - Todo Free (Task Management)
    - RockBlog (CMS Platform)
    - Expense Tracker (Financial Analysis)
+   - SEO Spam Recovery (GSC: 19,000 → ~600 spam URLs indexed)
 5. **Contact**: Multiple contact channels
 
 ## 📄 License
