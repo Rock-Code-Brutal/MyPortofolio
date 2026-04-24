@@ -278,17 +278,16 @@ export default function Home() {
 
                         {/* Project 4: SEO Spam Recovery */}
                         <div className="bg-gray-800/50 rounded-lg overflow-hidden backdrop-blur-sm hover:scale-105 transition-transform duration-300 border border-green-600/30">
-                            <div className="h-48 bg-gradient-to-br from-green-700 via-emerald-700 to-teal-800 flex items-center justify-center relative overflow-hidden">
+                            <div className="h-48 relative overflow-hidden cursor-pointer group" onClick={() => window.open('/gsc.jpeg', '_blank')}>
                                 <Image
                                     src="/gsc.jpeg"
                                     alt="GSC spam recovery evidence"
                                     fill
-                                    className="object-cover opacity-60"
-                                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                                    className="object-cover object-top"
                                 />
-                                <div className="relative z-10 text-center">
-                                    <TrendingDown className="text-green-300 mx-auto mb-2" size={48} strokeWidth={1.5} />
-                                    <Search className="text-white/60 mx-auto" size={24} strokeWidth={1.5} />
+                                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
+                                    <Search className="text-white" size={32} strokeWidth={1.5} />
+                                    <span className="text-white text-sm ml-2 font-medium">View Evidence</span>
                                 </div>
                                 <div className="absolute top-3 right-3 z-10">
                                     <span className="text-xs px-2 py-1 bg-green-500/30 text-green-300 border border-green-500/40 rounded-full font-bold">
