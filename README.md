@@ -36,47 +36,9 @@ src/
     └── translations.ts      # Translations (EN/ID)
 ```
 
-## 🚀 Getting Started
+## 🌐 Live Site
 
-### Prerequisites
-- Node.js 18+ installed
-- npm or yarn package manager
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/Rock-Code-Brutal/MyPortofolio.git
-
-# Navigate to project directory
-cd MyPortofolio
-
-# Install dependencies
-npm install
-
-# Run development server
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-## 🌐 Language Support
-
-The portfolio supports two languages:
-- **English (EN)**: Default language
-- **Indonesian (ID)**: Bahasa Indonesia
-
-Language preference is saved in localStorage and persists across sessions.
-
-## 📦 Build for Production
-
-```bash
-# Create production build
-npm run build
-
-# Start production server
-npm start
-```
+👉 [my-portofolio-eta-seven.vercel.app](https://my-portofolio-eta-seven.vercel.app)
 
 ## 🎨 Key Sections
 
