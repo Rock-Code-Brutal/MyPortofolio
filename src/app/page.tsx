@@ -178,7 +178,7 @@ export default function Home() {
                                     {t.projects.bpr.description}
                                 </p>
                                 <div className="flex flex-wrap gap-2 mb-4">
-                                    <span className="text-xs px-2 py-1 bg-slate-600/20 text-slate-300 rounded border border-slate-600/30">Next.js 16</span>
+                                    <span className="text-xs px-2 py-1 bg-slate-600/20 text-slate-300 rounded border border-slate-600/30">Next.js 15</span>
                                     <span className="text-xs px-2 py-1 bg-blue-600/20 text-blue-400 rounded border border-blue-600/30">React 19</span>
                                     <span className="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded border border-blue-500/30">TypeScript</span>
                                     <span className="text-xs px-2 py-1 bg-cyan-600/20 text-cyan-400 rounded border border-cyan-600/30">Tailwind CSS</span>

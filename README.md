@@ -1,11 +1,11 @@
 # 🚀 Rocky's Portfolio
 
-A modern, responsive portfolio website built with Next.js 16, React 19, and TypeScript. Features bilingual support (English/Indonesian) with dynamic language switching.
+A modern, responsive portfolio website built with Next.js 15, React 19, and TypeScript. Features bilingual support (English/Indonesian) with dynamic language switching.
 
 ## ✨ Features
 
 - **Bilingual Support**: Seamlessly switch between English and Indonesian
-- **Modern Tech Stack**: Built with Next.js 16, React 19, and TypeScript
+- **Modern Tech Stack**: Built with Next.js 15, React 19, and TypeScript
 - **Responsive Design**: Optimized for all devices
 - **Performance Optimized**: Vercel Analytics & Speed Insights integrated
 - **Professional UI**: Glassmorphism effects with Tailwind CSS
@@ -13,7 +13,7 @@ A modern, responsive portfolio website built with Next.js 16, React 19, and Type
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js 16 (App Router)
+- **Framework**: Next.js 15 (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS 4
 - **Icons**: Lucide React
