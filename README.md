@@ -20,22 +20,6 @@ A modern, responsive portfolio website built with Next.js 16, React 19, and Type
 - **Analytics**: Vercel Analytics & Speed Insights
 - **Deployment**: Vercel
 
-## 📂 Project Structure
-
-```
-src/
-├── app/
-│   ├── layout.tsx          # Root layout with providers
-│   ├── page.tsx            # Main portfolio page
-│   └── globals.css         # Global styles
-├── components/
-│   └── LanguageToggle.tsx  # Language switcher component
-├── contexts/
-│   └── LanguageContext.tsx # Language context provider
-└── locales/
-    └── translations.ts      # Translations (EN/ID)
-```
-
 ## 🌐 Live Site
 
 👉 [my-portofolio-eta-seven.vercel.app](https://my-portofolio-eta-seven.vercel.app)
@@ -64,8 +48,3 @@ This project is open source and available for educational purposes.
 - LinkedIn: [rocky-kho-75aa40294](https://www.linkedin.com/in/rocky-kho-75aa40294/)
 - Email: rockerbest06@gmail.com
 
-## 🙏 Acknowledgments
-
-- Built with [Next.js](https://nextjs.org/)
-- Icons by [Lucide](https://lucide.dev/)
-- Deployed on [Vercel](https://vercel.com/)
